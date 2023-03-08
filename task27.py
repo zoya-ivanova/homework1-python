@@ -14,9 +14,9 @@
 #     "So if she sells sea shells on the sea shore,I'm sure that the shells are sea shore shells".lower().split())))
 # 2 вариант
 text = "She sells sea shells on the sea shore;The shells that she sells are sea shells I'm sure. So if she sells sea shells on the sea shore,I'm sure that the shells are sea shore shells"
-text1 = []
+text1 = " "
 for item in text:
-    if item.isalpha():
-        text1.append(item)
-
-print(len(set.lower().split()))
+    if item.isalpha() or item == " ": # проверяет полностью ли состоит из букв
+        text1 += item
+print(text1)
+print(len(set(text1.lower().split())))
